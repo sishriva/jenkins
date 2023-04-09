@@ -32,4 +32,9 @@ pipeline {
             }
         }
     }
+    post {
+        always {   
+            emailext attachLog: true, body: ' Project: "$PROJECT_NAME", Build Number: "$BUILD_NUMBER", Build Status: "$BUILD_STATUS" \n For detailed report please open the below attached file', subject: '$PROJECT_NAME, $BUILD_NUMBER, $BUILD_STATUS', to: 'siddharth.s2295@gmail.com'
+        }
+    }
 }
