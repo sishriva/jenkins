@@ -20,10 +20,14 @@ pipeline {
 //		sh 'cat /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
-        stage('Deploy') {
+        stage('Push the configuration') {
             steps {
                 echo 'Deploying....'
 		sh 'python3 /home/netman/Documents/Lab9/netman_netconf_obj2.py'
+            }
+        stage('Unit Testing') {
+            steps {
+                echo 'Unit Testing....'
             }
         }
     }
