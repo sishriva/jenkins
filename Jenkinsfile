@@ -2,10 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Install required packages') {
             steps {
 		echo 'Installing required packages ncclient, pandas, ipaddress, netaddr, prettytable'
-		sh 'pip3 install --upgrade pip'
 		sh 'pip3 install ncclient'	 
 		sh 'pip3 install pandas'	 
 		sh 'pip3 install ipaddress'	 
