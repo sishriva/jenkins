@@ -23,6 +23,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+		sh 'python3 /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
     }
