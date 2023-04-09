@@ -5,12 +5,12 @@ pipeline {
         stage('Install required packages') {
             steps {
 		echo 'Installing required packages ncclient, pandas, ipaddress, netaddr, prettytable'
-		sh 'sudo pip3 install ncclient'	 
-		sh 'sudo pip3 install pandas'	 
-		sh 'sudo pip3 install ipaddress'	 
-		sh 'sudo pip3 install netaddr'	 
-		sh 'sudo pip3 install prettytable'	 
-		sh 'sudo pip3 install pylint'	 
+		sh 'sudo pip install ncclient'	 
+		sh 'sudo pip install pandas'	 
+		sh 'sudo pip install ipaddress'	 
+		sh 'sudo pip install netaddr'	 
+		sh 'sudo pip install prettytable'	 
+		sh 'sudo pip install pylint'	 
             }
         }
         stage('Check code style') {
