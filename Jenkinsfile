@@ -16,7 +16,8 @@ pipeline {
         stage('Check code style') {
             steps {
                 echo 'Checking code PEP8 code style'
-		sh '/home/netman/.local/bin/pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
+//		sh 'pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
+		sh 'cat /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
         stage('Deploy') {
