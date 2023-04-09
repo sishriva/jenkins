@@ -4,8 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
-		echo 'Test2'
+		sh 'echo 'Installing required packages ncclient, pandas, ipaddress, netaddr, prettytable''
+		sh 'python3 -m pip install ncclient'	 
+		sh 'python3 -m pip install pandas'	 
+		sh 'python3 -m pip install ipaddress'	 
+		sh 'python3 -m pip install netaddr'	 
+		sh 'python3 -m pip install prettytable'	 
             }
         }
         stage('Test') {
