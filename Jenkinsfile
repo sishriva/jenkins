@@ -10,13 +10,13 @@ pipeline {
 		sh 'pip3 install ipaddress'	 
 		sh 'pip3 install netaddr'	 
 		sh 'pip3 install prettytable'	 
+		sh 'pip3 install pylint'	 
             }
         }
         stage('Check code style') {
             steps {
                 echo 'Checking code PEP8 code style'
-		echo 'pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
-		sh 'id'
+		sh 'pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
         stage('Deploy') {
