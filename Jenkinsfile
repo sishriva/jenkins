@@ -12,10 +12,10 @@ pipeline {
 		sh 'pip3 install prettytable'	 
             }
         }
-        stage('Test') {
+        stage('Check code style') {
             steps {
-                echo 'Testing..'
-		echo 'Test2'
+                echo 'Checking code PEP8 code style'
+		sh 'pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
         stage('Deploy') {
