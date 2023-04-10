@@ -30,6 +30,7 @@ pipeline {
             steps {
                 echo 'Unit Testing....'
 		sh 'python3 /home/netman/Documents/Lab9/unitest.py'
+		echo 'Thanks for using Jenkins'
             }
         }
     }
