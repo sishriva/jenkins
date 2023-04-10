@@ -29,6 +29,7 @@ pipeline {
         stage('Unit Testing') {
             steps {
                 echo 'Unit Testing....'
+		sh 'python3 /home/netman/Documents/Lab9/unitest.py'
             }
         }
     }
