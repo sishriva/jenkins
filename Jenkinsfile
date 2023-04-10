@@ -11,14 +11,13 @@ pipeline {
 		sh 'python3 -m pip install ipaddress'	 
 		sh 'python3 -m pip install netaddr'	 
 		sh 'python3 -m pip install prettytable'	 
-		sh 'python3 -m pip install netmiko==3.0.0'	 
-		sh 'python3 -m pip install pylint==2.9.6'	 
+		sh 'apt install pylint'
             }
         }
         stage('Check code style') {
             steps {
                 echo 'Checking code PEP8 code style....'
-		sh 'sudo /home/netman/.local/bin/pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
+		sh '/home/netman/.local/bin/pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
 //		sh 'cat /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
