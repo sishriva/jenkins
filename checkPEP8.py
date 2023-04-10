@@ -7,10 +7,10 @@ result = subprocess.check_output("python3 -m pylint /home/netman/Documents/Lab9/
 result = float(result)
 if result > 10:
     print("PEP8 style code violation detected. Exiting....")
-    exit 1
+    exit(1)
 else:
     print("Code complies with the PEP8 style. Continuing....")
-    exit 0
+    exit(0)
 
 #if __name__ == '__main__':
 #    check()
