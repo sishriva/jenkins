@@ -17,16 +17,13 @@ pipeline {
             steps {
                 echo 'Checking code PEP8 code style....'
 		sh 'python3 /home/netman/Documents/Lab9/checkPEP8.py'
-//		sh '/home/netman/.local/bin/pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
-//		sh "python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep 'Your code has been rated' | awk '{print $7}' | awk -F/ '{print $1}'"
-//		sh '''output=$(python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep \'Your code has been rated\' | awk \'{print $7}\' | awk -F/ \'{print $1}\')'''
-//		sh 'cat /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
         stage('Push the configuration') {
             steps {
                 echo 'Pushing the configuration on routers....'
 		sh 'python3 /home/netman/Documents/Lab9/netman_netconf_obj2.py'
+		sh 'sleep 60'
             }
 	}
         stage('Unit Testing') {
