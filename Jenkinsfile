@@ -11,6 +11,8 @@ pipeline {
 		sh 'python3 -m pip install ipaddress'	 
 		sh 'python3 -m pip install netaddr'	 
 		sh 'python3 -m pip install prettytable'	 
+		sh 'python3 -m pip install netmiko'	 
+		sh 'python3 -m pip install pylint'	 
             }
         }
         stage('Check code style') {
