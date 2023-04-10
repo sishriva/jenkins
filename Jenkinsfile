@@ -19,7 +19,7 @@ pipeline {
 //		sh '/home/netman/.local/bin/pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
 //		sh "python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep 'Your code has been rated' | awk '{print $7}' | awk -F/ '{print $1}'"
 		sh '''output=$(python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep \'Your code has been rated\' | awk \'{print $7}\' | awk -F/ \'{print $1}\')'''
-		sh 'echo output'
+		sh 'echo $output'
 //		sh 'cat /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
