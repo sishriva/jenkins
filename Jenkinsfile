@@ -16,10 +16,10 @@ pipeline {
         stage('Check code style') {
             steps {
                 echo 'Checking code PEP8 code style....'
+		sh 'python3 /home/netman/Documents/Lab9/checkPEP8.py'
 //		sh '/home/netman/.local/bin/pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py'
 //		sh "python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep 'Your code has been rated' | awk '{print $7}' | awk -F/ '{print $1}'"
-		sh '''output=$(python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep \'Your code has been rated\' | awk \'{print $7}\' | awk -F/ \'{print $1}\')'''
-		sh 'echo $output'
+//		sh '''output=$(python3 -m pylint /home/netman/Documents/Lab9/netman_netconf_obj2.py | grep \'Your code has been rated\' | awk \'{print $7}\' | awk -F/ \'{print $1}\')'''
 //		sh 'cat /home/netman/Documents/Lab9/netman_netconf_obj2.py'
             }
         }
